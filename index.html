@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-firestore.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1>Note List</h1>
+
+  <div class="content">
+    <form id="add-note-form">
+      <input type="text" name="note1" placeholder="Note name" />
+      <input type="text" name="info" placeholder="Note info" />
+      <button>Add Note</button>
+    </form>
+
+    <ul id="note-list"></ul>
+  </div>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCGREPzHnhhI0LzVFYOmVcThrKRSetWodc",
+      authDomain: "cafeapp-22a94.firebaseapp.com",
+      databaseURL: "https://cafeapp-22a94.firebaseio.com",
+      projectId: "cafeapp-22a94",
+      storageBucket: "cafeapp-22a94.appspot.com",
+      messagingSenderId: "121412412925",
+      appId: "1:121412412925:web:8be05f369994ba61ac2594",
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore();
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <script src="app.js"></script>
+</body>
+
+</html>
